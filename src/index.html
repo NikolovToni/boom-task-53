@@ -7,7 +7,10 @@
       name="description"
       content="Used as a boilerplate for tasks in the 'HTML, CSS and SASS' course in boom.dev"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
   </head>
   <body>
     <div class="main">
@@ -37,8 +40,7 @@
           </div>
 
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
             <a href="#">#responsive</a>
             <br />
             <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
@@ -47,4 +49,12 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    const products = document.querySelectorAll(".product");
+    const prices = document.querySelectorAll(".price");
+
+    products.forEach((product, index) => {
+      product.setAttribute("data-price", prices[index].innerText);
+    });
+  </script>
 </html>
